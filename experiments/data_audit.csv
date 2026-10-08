@@ -1,0 +1,16 @@
+,train,provided_test
+rows,161297,53766
+columns,7,7
+missing_condition,899,295
+missing_review,0,0
+full_duplicate_rows,0,0
+duplicate_ids,0,0
+duplicate_raw_text,48968,5486
+blank_review,0,0
+invalid_rating,0,0
+invalid_date,0,0
+negative_useful_count,0,0
+condition_artifacts,900,271
+html_entity_reviews,104328,34922
+unique_drugs,3436,2637
+unique_conditions,884,708

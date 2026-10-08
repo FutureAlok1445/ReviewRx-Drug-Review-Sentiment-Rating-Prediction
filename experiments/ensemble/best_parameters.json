@@ -1,0 +1,19 @@
+{
+  "Logistic Regression": {
+    "C": 0.5809584204731072,
+    "class_weight": "balanced"
+  },
+  "Complement NB": {
+    "alpha": 0.10253509690168493
+  },
+  "Bagging NB": {
+    "alpha": 0.17505961902039982,
+    "n_estimators": 3,
+    "max_samples": 0.5
+  },
+  "AdaBoost": {
+    "max_depth": 2,
+    "n_estimators": 40,
+    "learning_rate": 1.3955612437469505
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "notebook_schema": "passed",
+  "code_syntax": "passed",
+  "executed_code_cells": 41,
+  "execution_errors": 0,
+  "csv_hashes_unchanged": true,
+  "fresh_process_inference_examples": 12,
+  "empty_input_validation": "passed",
+  "saved_model_roundtrip": "passed in notebook",
+  "embedded_figures": 18,
+  "colab_execution": "not performed; historical local outputs checked; fresh cloud run still required",
+  "selected_estimator_iterations": [
+    110
+  ],
+  "rating_estimator_iterations": [
+    328
+  ],
+  "ensemble_studies": "26 fitted-model trials and 30 OOF voting trials completed",
+  "test_status": "Previously evaluated non-overlapping test; repeated assessment, not independent confirmation",
+  "current_model_directory": "models_ensemble",
+  "publication_checks": {
+    "backend_with_8_local_examples": "passed",
+    "clean_clone_without_dataset_or_examples": "passed",
+    "notebook_raw_review_outputs": "omitted; aggregate charts retained",
+    "tracked_file_limit": "all files below 100 MiB",
+    "README_local_links": "passed"
+  }
+}

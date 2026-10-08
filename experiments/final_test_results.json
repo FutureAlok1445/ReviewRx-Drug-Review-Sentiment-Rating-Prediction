@@ -1,0 +1,28 @@
+{
+  "selected_experience": {
+    "Accuracy": 0.7534229601635586,
+    "Precision": 0.6338626801911509,
+    "Recall": 0.669993720899677,
+    "F1": 0.6451485214325207,
+    "ROC-AUC": 0.871656384639168
+  },
+  "original_settings_experience": {
+    "Accuracy": 0.7490242240257728,
+    "Precision": 0.6319803180951352,
+    "Recall": 0.6706222585674779,
+    "F1": 0.6434022126866891,
+    "ROC-AUC": 0.8692251706075335
+  },
+  "selected_rating": {
+    "MAE": 1.48274580261446,
+    "RMSE": 2.575097222383476,
+    "Exact accuracy": 0.4314478656836627,
+    "Within-1 accuracy": 0.6874419180967722
+  },
+  "original_settings_rating": {
+    "MAE": 1.6108047828511245,
+    "RMSE": 2.6095476952018406,
+    "Exact accuracy": 0.37271544513970634,
+    "Within-1 accuracy": 0.6391177746112384
+  }
+}

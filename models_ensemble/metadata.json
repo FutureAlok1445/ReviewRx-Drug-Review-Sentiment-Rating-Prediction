@@ -1,0 +1,129 @@
+{
+  "seed": 42,
+  "optuna_version": "5.0.0",
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "joblib": "1.5.3"
+  },
+  "sentiment_selection": "Optuna weighted voting",
+  "rating_selection": "Unweighted rating logistic",
+  "best_parameters": {
+    "Logistic Regression": {
+      "C": 0.5809584204731072,
+      "class_weight": "balanced"
+    },
+    "Complement NB": {
+      "alpha": 0.10253509690168493
+    },
+    "Bagging NB": {
+      "alpha": 0.17505961902039982,
+      "n_estimators": 3,
+      "max_samples": 0.5
+    },
+    "AdaBoost": {
+      "max_depth": 2,
+      "n_estimators": 40,
+      "learning_rate": 1.3955612437469505
+    }
+  },
+  "voting_names": [
+    "Logistic Regression",
+    "Complement NB",
+    "Bagging NB",
+    "AdaBoost"
+  ],
+  "voting_weights": [
+    1.0,
+    0.5,
+    0.01,
+    0.5
+  ],
+  "rating_nb_parameters": {
+    "alpha": 0.7564863059398569
+  },
+  "trial_budgets": {
+    "Logistic Regression": 6,
+    "Complement NB": 6,
+    "Bagging NB": 4,
+    "AdaBoost": 4
+  },
+  "voting_trials": 30,
+  "rating_nb_trials": 6,
+  "validation_selection": {
+    "Model": "Optuna weighted voting",
+    "Accuracy": 0.7655610277102,
+    "Precision": 0.639315890740978,
+    "Recall": 0.6686663976309944,
+    "F1": 0.6510040115608924,
+    "ROC-AUC": 0.8774676436847652,
+    "Train Accuracy": 0.8557281634703962,
+    "Train F1": 0.797604138238785,
+    "Fit seconds": null,
+    "CV Score": 0.6453456899541266,
+    "CV SD": 0.0008592112270645176,
+    "Notes": "OOF weights; shared tuning folds, not nested CV"
+  },
+  "rating_validation_selection": {
+    "Model": "Unweighted rating logistic",
+    "MAE": 1.5269091556399454,
+    "RMSE": 2.6271611883045263,
+    "Exact accuracy": 0.4198065626297989,
+    "Within-1 accuracy": 0.679522933602326,
+    "Train MAE": 0.4118478351896826,
+    "CV MAE": 1.556056857332857,
+    "CV SD": 0.0028710044503864
+  },
+  "repeat_test_results": {
+    "experience": {
+      "Accuracy": 0.7669908927575739,
+      "Precision": 0.6355514723956858,
+      "Recall": 0.6655778981509829,
+      "F1": 0.6477480327621948,
+      "ROC-AUC": 0.8767344023741428
+    },
+    "rating": {
+      "MAE": 1.48274580261446,
+      "RMSE": 2.575097222383476,
+      "Exact accuracy": 0.4314478656836627,
+      "Within-1 accuracy": 0.6874419180967722
+    }
+  },
+  "test_status": "Previously evaluated non-overlapping test; repeated assessment, not independent confirmation",
+  "input_contract": {
+    "drug": "str (display only)",
+    "condition": "str (display only)",
+    "review": "str"
+  },
+  "output_contract": [
+    "drug",
+    "condition",
+    "predicted_experience_class",
+    "confidence",
+    "predicted_rating"
+  ],
+  "confidence_note": "Maximum class probability; not independently calibrated",
+  "file_sha256": {
+    "drugsComTrain_raw.csv": "bc0902b21af0db5b99568a7639ed5f7dad3494a8186a20d05c5b4016c6caedf4",
+    "drugsComTest_raw.csv": "dfdaa5245b3f24e2af2b26ff4b21b798159c2d54184da9846c9458b83d1897c3"
+  },
+  "fixed_parameters": {
+    "tfidf": {
+      "max_features": 80000,
+      "min_df": 2,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "sublinear_tf": true
+    },
+    "AdaBoost": {
+      "selector_k": 8000,
+      "tree_max_features": 0.1,
+      "tree_class_weight": null
+    }
+  }
+}

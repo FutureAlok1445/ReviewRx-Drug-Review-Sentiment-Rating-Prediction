@@ -1,0 +1,8 @@
+{
+  "raw_shared_strings": 32131,
+  "raw_overlap_fraction_unique_test": 0.6655136702568352,
+  "normalized_overlap_test_rows": 32228,
+  "reserved_test_examples": 16141,
+  "development_examples": 112381,
+  "conflicting_training_groups": 74
+}

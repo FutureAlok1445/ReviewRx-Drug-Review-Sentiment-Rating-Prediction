@@ -1,0 +1,349 @@
+{
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "joblib": "1.5.3"
+  },
+  "hashes": {
+    "drugsComTrain_raw.csv": "bc0902b21af0db5b99568a7639ed5f7dad3494a8186a20d05c5b4016c6caedf4",
+    "drugsComTest_raw.csv": "dfdaa5245b3f24e2af2b26ff4b21b798159c2d54184da9846c9458b83d1897c3"
+  },
+  "splits": {
+    "original_train": 137147,
+    "original_validation": 24150,
+    "train": 95528,
+    "validation": 16853,
+    "reserved_test": 16141
+  },
+  "original_reproduction": {
+    "experience_train": {
+      "Accuracy": 0.8722611504444137,
+      "Precision": 0.7997004497442265,
+      "Recall": 0.8836979145705794,
+      "F1": 0.8291716017781819,
+      "ROC-AUC": 0.9718045413003914
+    },
+    "experience_validation": {
+      "Accuracy": 0.743064182194617,
+      "Precision": 0.6239486340755424,
+      "Recall": 0.6568733532196166,
+      "F1": 0.6338191509323498,
+      "ROC-AUC": 0.8626809943887856
+    },
+    "rating_train": {
+      "MAE": 0.8512909505858677,
+      "RMSE": 1.9802078711713,
+      "Exact accuracy": 0.6957862731229995,
+      "Within-1 accuracy": 0.8166784545050202
+    },
+    "rating_validation": {
+      "MAE": 1.604016563146998,
+      "RMSE": 2.5790604481149826,
+      "Exact accuracy": 0.3648033126293996,
+      "Within-1 accuracy": 0.6433540372670807
+    }
+  },
+  "validation_comparison": [
+    {
+      "Model": "Original settings (fair split)",
+      "Accuracy": 0.7437251527917879,
+      "Precision": 0.629781502114146,
+      "Recall": 0.6655349054567651,
+      "F1": 0.6395993443792065,
+      "ROC-AUC": 0.8696898644644206,
+      "Train Accuracy": 0.8412612009044469,
+      "Train F1": 0.7881432334960646,
+      "Fit seconds": 58.43551516532898,
+      "CV Score": 0.637181558664154,
+      "CV SD": 0.0005204110313615629,
+      "Notes": "Same grouped folds; macro metrics"
+    },
+    {
+      "Model": "Richer logistic",
+      "Accuracy": 0.7593306829644574,
+      "Precision": 0.6296088871733388,
+      "Recall": 0.6527159867825567,
+      "F1": 0.638713351044352,
+      "ROC-AUC": 0.8646525614161574,
+      "Train Accuracy": 0.9396197973369065,
+      "Train F1": 0.92025284315439,
+      "Fit seconds": 98.08462047576904,
+      "CV Score": 0.6336438643209952,
+      "CV SD": 0.002147387006186542,
+      "Notes": "Same grouped folds; macro metrics"
+    },
+    {
+      "Model": "Linear SVM",
+      "Accuracy": 0.774461520204118,
+      "Precision": 0.6280755240662396,
+      "Recall": 0.6273349298242603,
+      "F1": 0.6271639350845161,
+      "ROC-AUC": 0.8512390099551794,
+      "Train Accuracy": 0.9768654216564777,
+      "Train F1": 0.9667582783723274,
+      "Fit seconds": 51.785024881362915,
+      "CV Score": 0.6193901249301349,
+      "CV SD": 0.0036545085891544534,
+      "Notes": "Same grouped folds; macro metrics"
+    },
+    {
+      "Model": "Complement NB",
+      "Accuracy": 0.7565418619830298,
+      "Precision": 0.5996595687984294,
+      "Recall": 0.5964321028689578,
+      "F1": 0.5738652578571194,
+      "ROC-AUC": 0.8533719509136203,
+      "Train Accuracy": 0.817739301566033,
+      "Train F1": 0.6957285505672366,
+      "Fit seconds": 27.50094723701477,
+      "CV Score": 0.5724010568704464,
+      "CV SD": 0.0008701553655195849,
+      "Notes": "Same grouped folds; macro metrics"
+    },
+    {
+      "Model": "Tuned logistic",
+      "Accuracy": 0.7531596748353409,
+      "Precision": 0.6369032521478659,
+      "Recall": 0.6718120349804829,
+      "F1": 0.6478333105818758,
+      "ROC-AUC": 0.8710447472527338,
+      "Train Accuracy": 0.8734297797504397,
+      "Train F1": 0.8312015251379506,
+      "Fit seconds": 26.159600257873535,
+      "CV Score": 0.6398646832635461,
+      "CV SD": 0.0005022329150431239,
+      "Notes": "CV used for tuning; validation confirms"
+    },
+    {
+      "Model": "Word + character logistic",
+      "Accuracy": 0.7525069720524535,
+      "Precision": 0.6342812197005737,
+      "Recall": 0.6674166251650151,
+      "F1": 0.6447763401240192,
+      "ROC-AUC": 0.8704872649531259,
+      "Train Accuracy": 0.8731262038355246,
+      "Train F1": 0.831684944922575,
+      "Fit seconds": 357.2751851081848,
+      "CV Score": 0.6352018290268239,
+      "CV SD": 0.0007919260122398881,
+      "Notes": "Same grouped folds; macro metrics"
+    }
+  ],
+  "rating_validation_comparison": [
+    {
+      "Model": "Original rating settings (fair split)",
+      "MAE": 1.6150833679463596,
+      "RMSE": 2.599483263650522,
+      "Exact accuracy": 0.36432682608437666,
+      "Within-1 accuracy": 0.6379279653474159,
+      "Train MAE": 0.979346369650783,
+      "CV MAE": 1.6314586210326718,
+      "CV SD": 0.014894160460940022
+    },
+    {
+      "Model": "Unweighted rating logistic",
+      "MAE": 1.5269091556399454,
+      "RMSE": 2.6271611883045263,
+      "Exact accuracy": 0.4198065626297989,
+      "Within-1 accuracy": 0.679522933602326,
+      "Train MAE": 0.4118478351896826,
+      "CV MAE": 1.556056857332857,
+      "CV SD": 0.002871004450386454
+    },
+    {
+      "Model": "Tuned rating logistic",
+      "MAE": 1.5269091556399454,
+      "RMSE": 2.6271611883045263,
+      "Exact accuracy": 0.4198065626297989,
+      "Within-1 accuracy": 0.679522933602326,
+      "Train MAE": 0.4118478351896826,
+      "CV MAE": 1.556056857332857,
+      "CV SD": 0.002871004450386454
+    }
+  ],
+  "cv_scores": {
+    "Original settings (fair split)": [
+      0.6375587803255489,
+      0.6364456642452,
+      0.6375402314217133
+    ],
+    "Richer logistic": [
+      0.6330207732483087,
+      0.6313813615734358,
+      0.6365294581412411
+    ],
+    "Linear SVM": [
+      0.6190070370181995,
+      0.6151181408777775,
+      0.6240451968944276
+    ],
+    "Complement NB": [
+      0.5734670180791723,
+      0.5713355816028872,
+      0.5724005709292799
+    ],
+    "Tuned logistic": [
+      0.6402698231832558,
+      0.6391568875269119,
+      0.6401673390804706
+    ],
+    "Word + character logistic": [
+      0.6356730908782868,
+      0.634086337649765,
+      0.6358460585524197
+    ]
+  },
+  "rating_cv_scores": {
+    "Original rating settings (fair split)": [
+      1.6392927802028703,
+      1.6444744527839714,
+      1.610608630111174
+    ],
+    "Unweighted rating logistic": [
+      1.552837358289106,
+      1.5598090632164054,
+      1.5555241504930595
+    ],
+    "Tuned rating logistic": [
+      1.552837358289106,
+      1.5598090632164054,
+      1.5555241504930595
+    ]
+  },
+  "test_results": {
+    "selected_experience": {
+      "Accuracy": 0.7534229601635586,
+      "Precision": 0.6338626801911509,
+      "Recall": 0.669993720899677,
+      "F1": 0.6451485214325207,
+      "ROC-AUC": 0.871656384639168
+    },
+    "original_settings_experience": {
+      "Accuracy": 0.7490242240257728,
+      "Precision": 0.6319803180951352,
+      "Recall": 0.6706222585674779,
+      "F1": 0.6434022126866891,
+      "ROC-AUC": 0.8692251706075335
+    },
+    "selected_rating": {
+      "MAE": 1.48274580261446,
+      "RMSE": 2.575097222383476,
+      "Exact accuracy": 0.4314478656836627,
+      "Within-1 accuracy": 0.6874419180967722
+    },
+    "original_settings_rating": {
+      "MAE": 1.6108047828511245,
+      "RMSE": 2.6095476952018406,
+      "Exact accuracy": 0.37271544513970634,
+      "Within-1 accuracy": 0.6391177746112384
+    }
+  },
+  "selected_experience": "Tuned logistic",
+  "selected_rating": "Unweighted rating logistic",
+  "experience_search_best": {
+    "model__class_weight": "balanced",
+    "model__C": 1.0
+  },
+  "rating_search_best": {
+    "model__class_weight": null,
+    "model__C": 4.0
+  },
+  "top_terms": {
+    "Negative": [
+      "worse",
+      "worst",
+      "not recommend",
+      "not worth",
+      "horrible",
+      "never",
+      "not",
+      "disappointed",
+      "no relief",
+      "terrible"
+    ],
+    "Neutral": [
+      "but",
+      "however",
+      "hoping",
+      "yet",
+      "was great",
+      "just started",
+      "although",
+      "works but",
+      "helps with",
+      "though"
+    ],
+    "Positive": [
+      "love",
+      "miracle",
+      "amazing",
+      "great",
+      "works",
+      "best",
+      "love it",
+      "saved",
+      "years",
+      "no side"
+    ]
+  },
+  "test_f1_gain": 0.001746308745831593,
+  "test_mae_reduction": 0.1280589802366645,
+  "validation_classification_report": {
+    "Negative": {
+      "precision": 0.6732273530153924,
+      "recall": 0.7281659388646288,
+      "f1-score": 0.6996197718631179,
+      "support": 3664.0
+    },
+    "Neutral": {
+      "precision": 0.3196422656508778,
+      "recall": 0.4753694581280788,
+      "f1-score": 0.38225391166567635,
+      "support": 2030.0
+    },
+    "Positive": {
+      "precision": 0.9178401377773275,
+      "recall": 0.8119007079487409,
+      "f1-score": 0.8616262482168331,
+      "support": 11159.0
+    },
+    "accuracy": 0.7531596748353409,
+    "macro avg": {
+      "precision": 0.6369032521478659,
+      "recall": 0.6718120349804829,
+      "f1-score": 0.6478333105818758,
+      "support": 16853.0
+    },
+    "weighted avg": {
+      "precision": 0.7926041012387632,
+      "recall": 0.7531596748353409,
+      "f1-score": 0.7686625282525027,
+      "support": 16853.0
+    }
+  },
+  "length_error_analysis": {
+    "accuracy": {
+      "0\u20137": 0.7798165137614679,
+      "8\u201330": 0.7741935483870968,
+      "31\u201380": 0.7533837229741607,
+      "81+": 0.7475042063937185
+    },
+    "examples": {
+      "0\u20137": 327,
+      "8\u201330": 1922,
+      "31\u201380": 5689,
+      "81+": 8915
+    }
+  },
+  "leakage_audit": {
+    "raw_shared_strings": 32131,
+    "raw_overlap_fraction_unique_test": 0.6655136702568352,
+    "normalized_overlap_test_rows": 32228,
+    "reserved_test_examples": 16141,
+    "development_examples": 112381,
+    "conflicting_training_groups": 74
+  }
+}

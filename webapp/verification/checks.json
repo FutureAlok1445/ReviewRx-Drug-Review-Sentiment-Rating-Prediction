@@ -1,0 +1,21 @@
+{
+  "frontend_build": "passed (Vite production build)",
+  "dependency_audit": "0 vulnerabilities",
+  "backend_test": "passed using current real ensemble artifacts",
+  "notebook_download": "HTTP 200, attachment verified",
+  "invalid_reviews": "empty, whitespace, null, numeric, oversized and unexpected fields rejected",
+  "browser_predictions": "genuine dataset review predicted through current ensemble",
+  "results_dashboard": "12 actual sentiment candidates and 4 rating comparison rows",
+  "desktop_layout": {
+    "viewport": 1280,
+    "page_width": 1265,
+    "overflow": false
+  },
+  "mobile_layout": {
+    "viewport": 390,
+    "page_width": 375,
+    "overflow": false
+  },
+  "browser_console_errors": [],
+  "deployment": "local only; no external deployment"
+}

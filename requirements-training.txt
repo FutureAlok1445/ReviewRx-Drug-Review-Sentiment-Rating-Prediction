@@ -1,0 +1,15 @@
+# Local experiment versions. Python 3.14.2 was used; packages also support recent Colab Python.
+# Colab normally includes these; installing pinned versions may require a runtime restart.
+numpy==2.4.2
+pandas==3.0.1
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
+joblib==1.5.3
+# Notebook execution helpers are needed only for local automated runs.
+nbformat==5.10.4
+nbclient==0.10.4
+ipykernel>=6.29
+
+# Optuna and ensemble extension
+optuna==5.0.0

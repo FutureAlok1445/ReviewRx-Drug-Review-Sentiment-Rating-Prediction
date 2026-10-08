@@ -1,0 +1,33 @@
+# Patient-review data must be obtained by each user from the source.
+/drugsComTrain_raw.csv
+/drugsComTest_raw.csv
+/webapp/backend/examples.json
+/experiments/split_manifest.csv
+
+# Local builds, caches and portable bundles.
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+*.log
+*.zip
+/models_improved/
+/original/
+/experiments/figures/
+/experiments/tfidf_cache/
+/experiments/ensemble/*_candidate.joblib
+/experiments/ensemble/*_oof.npy
+.env
+.env.*
+!.env.example
+
+# Retain the verified built frontend in this small educational repository.
+!webapp/frontend/dist/
+!webapp/frontend/dist/**
+
+/experiments/validation_predictions.csv
+/webapp/verification/app-preview.jpg
+
+/.publication-check/
